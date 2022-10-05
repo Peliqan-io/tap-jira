@@ -11,7 +11,8 @@ setup(name="tap-jira",
       install_requires=[
           "singer-python @ git+https://github.com/peliqan-io/singer-python@master",
           "requests==2.20.0",
-          "dateparser"
+          "dateparser",
+          "pytz==2018.4"
       ],
       extras_require={
           'dev': [

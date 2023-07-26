@@ -120,8 +120,12 @@ def main():
 
     # Setup Context
     Context.client = jira_client
-    catalog = Catalog.from_dict(args.properties) \
-        if args.properties else discover()
+    if args.properties:
+        catalog = Catalog.from_dict(args.properties)
+    elif args.catalog:
+        catalog = args.catalog
+    else:
+        catalog = discover()
     Context.config = jira_config
     Context.state = args.state
     Context.catalog = catalog

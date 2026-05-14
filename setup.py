@@ -10,9 +10,9 @@ setup(name="tap-jira",
       py_modules=["tap_jira"],
       install_requires=[
           "singer-python @ git+https://github.com/peliqan-io/singer-python@master",
-          "requests==2.20.0",
+          "requests>=2.28.0",
           "dateparser",
-          "pytz==2018.4"
+          "pytz"
       ],
       extras_require={
           'dev': [
